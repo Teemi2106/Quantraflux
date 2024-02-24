@@ -1,0 +1,19 @@
+table {
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  border-collapse: collapse;
+  color: white;
+  font-size: 3vmin;
+  overflow-y: scroll;
+}
+td {
+  border: 1px solid white;
+}
+.netWorth {
+  color: chartreuse;
+  margin-top: 3vmin;
+  font-size: 3vmin;
+  font-family: monospace;
+  text-align: center;
+}

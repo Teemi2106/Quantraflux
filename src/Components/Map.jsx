@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../loader.css";
-import GoogleMapApp from "./GoogleMap";
+
+import "../CSS/Map.css";
 
 const Map = () => {
   const [isLoading, setLoading] = useState(true);
@@ -55,7 +56,9 @@ const Map = () => {
             <p style={{ color: "white", textAlign: "center" }}>Loading</p>
           </div>
         ) : (
-          <GoogleMapApp />
+          {
+            /* <GoogleMapApp /> */
+          }
         )}
       </div>
     </div>

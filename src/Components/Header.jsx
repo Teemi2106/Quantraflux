@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../images/image2.png";
 import { useNavigate } from "react-router-dom";
+import "../CSS/Header.css";
 
 const Header = () => {
   /*  const handleLogout = () => {

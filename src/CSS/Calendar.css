@@ -1,0 +1,69 @@
+.todoList {
+  min-height: fit-content;
+}
+
+.listDiv {
+  width: 100%;
+  min-height: fit-content;
+}
+.mainList {
+  padding: 0 2vmin;
+  min-height: 8vmin;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkbox {
+  height: 7vmin;
+  width: 7vmin;
+  cursor: pointer;
+}
+.label {
+  font-size: 3vmin;
+  color: white;
+}
+.delete {
+  border: none;
+  border-radius: 20px;
+  padding: 1.5vmin 3vmin;
+  color: red;
+  background-color: white;
+  font-weight: 600;
+}
+.delete:hover,
+.delete:focus {
+  color: white;
+  background-color: red;
+  transition: 0.3s;
+}
+
+.input {
+  width: 80%;
+  padding: 1.5vmin 3vmin;
+  border: 2px solid black;
+}
+
+.add {
+  border: 0;
+  border-radius: 0 20px 20px 0;
+  padding: 1.5vmin 3vmin;
+  color: steelblue;
+  background-color: white;
+  font-weight: 700;
+}
+.add:hover,
+.add:focus {
+  color: white;
+  background-color: steelblue;
+  transition: 0.3s;
+}
+
+@media all and (max-width: 800px) {
+  .delete,
+  .add,
+  .input {
+    font-size: 2vmin;
+    padding: 1vmin 2vmin;
+  }
+}

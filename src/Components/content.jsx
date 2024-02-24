@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../CSS/Content.css";
 
 const section = document.getElementById("section1");
 
@@ -158,31 +159,31 @@ const Content = ({ Api, Income, Map, Calendar }) => {
           Current Managing Personell
         </h2>
         <section className="carousel">
-          <div className="carouselChild" onClick={handleMeet}>
+          <div className="carouselChild">
             <h3>Ino</h3>
             <br></br>
             <p>Product Manager</p>
             <p>Monthly Wage: $11,000</p>
           </div>
-          <div className="carouselChild" onClick={handleMeet}>
+          <div className="carouselChild">
             <h3>Nezuko</h3>
             <br></br>
             <p>Company Secretary</p>
             <p>Monthly Wage: $9,800</p>
           </div>
-          <div className="carouselChild" onClick={handleMeet}>
+          <div className="carouselChild">
             <h3>Rinn</h3>
             <br />
             <p>Hiring Manager</p>
             <p>Monthly Wage: $10,000</p>
           </div>
-          <div className="carouselChild" onClick={handleMeet}>
+          <div className="carouselChild">
             <h3>Nami</h3>
             <br />
             <p>Data Analyst</p>
             <p>Monthly Wage: $7,600 (part-time)</p>
           </div>
-          <div className="carouselChild" onClick={handleMeet}>
+          <div className="carouselChild">
             <h3>Hinata</h3>
             <br />
             <p>Software Engineer</p>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "../CSS/Calendar.css";
 
 const Calendar = () => {
   const [activities, setActivities] = useState(
