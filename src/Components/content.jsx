@@ -3,7 +3,16 @@ import React, { useState, useEffect } from "react";
 const section = document.getElementById("section1");
 
 const Content = ({ Api, Income, Map, Calendar }) => {
-  const [content, setContent] = useState(<Api></Api>);
+  const [content, setContent] = useState(<Api />);
+  const [forex, setForex] = useState(0);
+
+  const handleForex = () => {
+    setForex(() => Math.floor(Math.random() * 151 + 150));
+  };
+
+  useEffect(() => {
+    handleForex();
+  }, []);
 
   const handleApiClick = () => {
     section.textContent = setContent(<Api />);
@@ -21,32 +30,40 @@ const Content = ({ Api, Income, Map, Calendar }) => {
     setContent(<Calendar />);
   };
 
-  const meet = document.querySelector(".carouselChild");
-  meet.addEventListener("click", alert("hello"));
-
-  const [increase, setIncrease] = useState(0);
+  const handleMeet = () => {
+    alert("Hello");
+  };
+  const [increase, setIncrease] = useState(
+    localStorage.getItem("Increase") || 0
+  );
 
   useEffect(() => {
     const numberElement = document.getElementById("number");
     if (numberElement) {
       numberElement.innerHTML = increase;
+      localStorage.setItem("Increase", increase);
     }
   }, [increase]);
 
   useEffect(() => {
     const one = document.getElementById("one");
-    if (increase <= 5) {
-      one.style.background = "green";
-    } else if (increase <= 10) {
-      one.style.backgroundColor = "orange";
+    if (increase <= 50) {
+      one.style.background = "white";
+    } else if (increase <= 100) {
+      one.style.backgroundColor = "wheat";
     } else {
-      one.style.backgroundColor = "red";
+      one.style.backgroundColor = "gold";
     }
   }, [increase]);
 
   useEffect(() => {
     const amount = document.getElementById("amount");
-    amount.innerHTML = increase * 255;
+    amount.innerHTML = increase * forex;
+  }, [increase, forex]);
+
+  useEffect(() => {
+    const shares = document.getElementById("shares");
+    shares.innerHTML = ((increase / 300) * 100).toFixed(2);
   }, [increase]);
 
   return (
@@ -84,7 +101,7 @@ const Content = ({ Api, Income, Map, Calendar }) => {
         </h2>
         <div id="parent">
           <div className="twin" id="one">
-            <div id="number"></div>
+            <div id="number">{localStorage.getItem(increase)}</div>
             <h2 className="increment">
               <span
                 className="minus"
@@ -92,7 +109,7 @@ const Content = ({ Api, Income, Map, Calendar }) => {
                   if (increase === 0) {
                     return;
                   } else {
-                    setIncrease(increase - 1);
+                    setIncrease(parseInt(increase) - 1);
                   }
                 }}
               >
@@ -104,7 +121,11 @@ const Content = ({ Api, Income, Map, Calendar }) => {
               <span
                 className="plus"
                 onClick={() => {
-                  setIncrease(increase + 1);
+                  if (increase <= 300) {
+                    setIncrease(parseInt(increase) + 1);
+                  } else {
+                    alert("No More Shares Available");
+                  }
                 }}
               >
                 +
@@ -112,10 +133,13 @@ const Content = ({ Api, Income, Map, Calendar }) => {
             </h2>
           </div>
           <div className="twin" id="two">
-            <h3>Price Per Share : $255.0</h3>
+            <h3>Price Per Share : ${forex}</h3>
             <h3>
-              Amount Purchased: $<span id="amount"></span>
+              Value Of Owned Shares: $<span id="amount"></span>
             </h3>
+            <h4 style={{ textAlign: "center" }}>
+              Percentage of shares owned:<span id="shares"></span>%
+            </h4>
           </div>
         </div>
       </section>
@@ -131,23 +155,38 @@ const Content = ({ Api, Income, Map, Calendar }) => {
             fontSize: "5vmin",
           }}
         >
-          Meet The Team
+          Current Managing Personell
         </h2>
         <section className="carousel">
-          <div className="carouselChild">
-            <p>Ino</p>
+          <div className="carouselChild" onClick={handleMeet}>
+            <h3>Ino</h3>
+            <br></br>
+            <p>Product Manager</p>
+            <p>Monthly Wage: $11,000</p>
           </div>
-          <div className="carouselChild">
-            <p>Nezuko</p>
+          <div className="carouselChild" onClick={handleMeet}>
+            <h3>Nezuko</h3>
+            <br></br>
+            <p>Company Secretary</p>
+            <p>Monthly Wage: $9,800</p>
           </div>
-          <div className="carouselChild">
-            <p>Rinn</p>
+          <div className="carouselChild" onClick={handleMeet}>
+            <h3>Rinn</h3>
+            <br />
+            <p>Hiring Manager</p>
+            <p>Monthly Wage: $10,000</p>
           </div>
-          <div className="carouselChild">
-            <p>Nami</p>
+          <div className="carouselChild" onClick={handleMeet}>
+            <h3>Nami</h3>
+            <br />
+            <p>Data Analyst</p>
+            <p>Monthly Wage: $7,600 (part-time)</p>
           </div>
-          <div className="carouselChild">
-            <p>Hinata</p>
+          <div className="carouselChild" onClick={handleMeet}>
+            <h3>Hinata</h3>
+            <br />
+            <p>Software Engineer</p>
+            <p>Monthly Wage: $10,500</p>
           </div>
         </section>
       </div>

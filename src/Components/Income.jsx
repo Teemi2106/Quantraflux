@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 const Value = [
   {
-    income: "+23786.53",
+    income: "+13786.53",
     expense: "",
     description: "Monthly Interest",
   },
@@ -13,7 +13,7 @@ const Value = [
     description: "Rent",
   },
   {
-    income: "+15389.99",
+    income: "+89293.99",
     expense: "",
     description: "Months Earnings",
   },
@@ -24,7 +24,7 @@ const Value = [
   },
   {
     income: "",
-    expense: " -6000.00",
+    expense: " -49899.00",
     description: "Workers Wages",
   },
   {
@@ -60,7 +60,7 @@ const Income = () => {
           padding: "2vmin",
         }}
       >
-        Weekly Income
+        Last Months Income
       </h2>
       <table>
         <thead>
