@@ -1,0 +1,32 @@
+ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3vmin;
+  border: 1px solid mediumpurple;
+  border-collapse: collapse;
+}
+div {
+  width: 100%;
+}
+li {
+  width: 100%;
+  height: 8vmin;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid mediumpurple;
+  border-collapse: collapse;
+}
+
+input {
+  width: 6vmin;
+  height: 6vmin;
+}
+
+input:checked ~ label {
+  text-decoration: dashed;
+}
+#new {
+  width: 10rem;
+}

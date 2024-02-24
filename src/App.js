@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Components/Header";
+import Content from "./Components/content";
+import Api from "./Components/Api";
+import Calendar from "./Components/Calendar";
+import MapComponent from "./Components/Map";
+import Income from "./Components/Income";
+import "./index.css";
+import "./images/image2.png";
+import Footer from "./Components/Footer";
+import CarouselComponent from "./Components/CarouselComponent";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header></Header>
+      <Content
+        Api={Api}
+        Income={Income}
+        Map={MapComponent}
+        Calendar={Calendar}
+      />
+      <Footer />
     </div>
   );
 }
