@@ -3,7 +3,9 @@ import { useState } from "react";
 
 const Calendar = () => {
   const [activities, setActivities] = useState(
-    JSON.parse(localStorage.getItem("Activities List"))
+    localStorage.getItem("Activities List")
+      ? JSON.parse(localStorage.getItem("Activities List"))
+      : []
   );
 
   const [newItem, setNewItem] = useState("");
