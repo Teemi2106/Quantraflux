@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 import "../CSS/Login.css";
-import { Routes, Route } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();

@@ -91,16 +91,21 @@ const Calendar = () => {
           flexGrow: "1",
           alignItems: "center",
         }}
+        id="form"
+        name="form"
         onSubmit={handleSubmit}
       >
-        <input
-          className="input"
-          id="addActivity"
-          placeholder="Add New Activity"
-          required
-          value={newItem}
-          onChange={(e) => setNewItem(e.target.value)}
-        />
+        <label>
+          <input
+            className="input"
+            id="addActivity"
+            placeholder="Add New Activity"
+            required
+            value={newItem}
+            onChange={(e) => setNewItem(e.target.value)}
+          />
+        </label>
+
         <button className="add" onClick={handleSubmit}>
           Add
         </button>
