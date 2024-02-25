@@ -1,5 +1,6 @@
 .about-page {
   width: 100%;
+  min-height: 100vh;
   font-size: 3vmin;
   margin: 0 auto;
   padding: 20px;
@@ -15,7 +16,7 @@
 }
 
 .about-section {
-  height: 30vh;
+  min-height: 30vh;
   border: 1px solid black;
   background-color: antiquewhite;
   text-align: center;

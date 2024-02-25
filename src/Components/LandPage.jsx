@@ -37,75 +37,74 @@ const LandPage = () => {
       <section className="testimonials">
         <h2>What Our Users Say</h2>
         <div className="testimonialDiv">
-          <div class="card">
-            <p class="card-title">Reabound Company</p>
-            <p class="small-desc">
+          <div className="card">
+            <p className="card-title">Reabound Company</p>
+            <p className="small-desc">
               "Quantraflux has been a game-changer for our team. The ability to
               easily access market analysis is invaluable."CEO & Co Founder
             </p>
-            <div class="go-corner">
-              <div class="go-arrow">→</div>
+            <div className="go-corner">
+              <div className="go-arrow">→</div>
             </div>
           </div>
-          <div class="card">
-            <p class="card-title">TechCrunch</p>
-            <p class="small-desc">
+          <div className="card">
+            <p className="card-title">TechCrunch</p>
+            <p className="small-desc">
               “I’ve never seen anything like Quantraflux. It’s an incredibly
               powerful tool that provides real-time financial intelligence at
               every level of the market.”
             </p>
-            <div class="go-corner">
-              <div class="go-arrow">→</div>
+            <div className="go-corner">
+              <div className="go-arrow">→</div>
             </div>
           </div>
-          <div class="card">
-            <p class="card-title">Forbes</p>
-            <p class="small-desc">
+          <div className="card">
+            <p className="card-title">Forbes</p>
+            <p className="small-desc">
               “The Quantraflux platform is one of the best tools I've ever used
               for analyzing stock markets and identifying trends.”
             </p>
-            <div class="go-corner">
-              <div class="go-arrow">→</div>
+            <div className="go-corner">
+              <div className="go-arrow">→</div>
             </div>
           </div>
-          <div class="card">
-            <p class="card-title">Financial Times</p>
-            <p class="small-desc">
+          <div className="card">
+            <p className="card-title">Financial Times</p>
+            <p className="small-desc">
               “Investors can now get instant insights into global financial
               data, which will revolutionize how they make decisions about
               investments.”
             </p>
-            <div class="go-corner">
-              <div class="go-arrow">→</div>
+            <div className="go-corner">
+              <div className="go-arrow">→</div>
             </div>
           </div>
-          <div class="card">
-            <p class="card-title">BigQuery</p>
-            <p class="small-desc">
+          <div className="card">
+            <p className="card-title">BigQuery</p>
+            <p className="small-desc">
               "Quantraflux has been a gamechanger in our ability to analyze
               large datasets from Google BigQuery.""Quantraflux integrates
               seamlessly "Quantraflux has been built with Google BigQuery in
               mind - it's a seamless integration that allows us to leverage
               Google's infrastructure to process large volumes of data."
             </p>
-            <div class="go-corner">
-              <div class="go-arrow">→</div>
+            <div className="go-corner">
+              <div className="go-arrow">→</div>
             </div>
           </div>
         </div>
       </section>
       <section className="section4">
-        <div class="input-group">
+        <div className="input-group">
           <input
             type="email"
-            class="input"
+            className="input"
             id="Email"
             name="Email"
             placeholder="quantraflux@bigdata.com"
-            autocomplete="off"
-            re
+            autoComplete="off"
           />
-          <input class="button--submit" value="Subscribe" type="submit" />
+          <input className="button--submit" value="Subscribe" type="submit" />
         </div>
         <p>Subscribe to our Free Weekly stock analysis</p>
       </section>

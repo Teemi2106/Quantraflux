@@ -35,13 +35,23 @@ const Login = () => {
     <div className="formDiv">
       <form className="logForm" onSubmit={handleLogin}>
         <div className="inputbox">
-          <input required="required" id="username" type="text" />
+          <input
+            required="required"
+            id="username"
+            type="text"
+            autoComplete="false"
+          />
           <span>Username</span>
 
           <i></i>
         </div>
         <div className="inputbox">
-          <input required="required" id="password" type="password" />
+          <input
+            required="required"
+            id="password"
+            type="password"
+            autoComplete="false"
+          />
           <span>Password</span>
           <i></i>
         </div>

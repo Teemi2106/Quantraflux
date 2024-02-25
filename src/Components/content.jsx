@@ -16,11 +16,11 @@ const Content = ({ Api, Income, Map, Calendar }) => {
   }, []);
 
   const handleApiClick = () => {
-    section.textContent = setContent(<Api />);
+    setContent(<Api />);
   };
 
   const handleIncomeClick = () => {
-    setContent(<Income></Income>);
+    setContent(<Income />);
   };
 
   const handleMapClick = () => {
